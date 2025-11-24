@@ -1,21 +1,34 @@
-import Noctiluz from '@/components/svgs/noctiluz.svg'
-import LoginForm from './_components/LoginForm';
+export default function LoginPage() {
+  return (
+    <div style={{ 
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      flexDirection: "column",
+      gap: "12px"
+    }}>
+      <h1>Entrar</h1>
 
-function LoginPage() {
-  return ( 
-    <main className="lg:h-screen flex">
-      <div className="w-[55%] h-full flex flex-col gap-8 items-center justify-center">
-        <LoginForm />
-      </div>
+      <input 
+        type="email" 
+        placeholder="E-mail" 
+        style={{ padding: "8px", width: "240px" }} 
+      />
 
-      <div className="login-background h-full w-[45%] flex flex-col items-center py-32">
-        <div className="text-pink-500 flex gap-4">
-          <Noctiluz className="w-[115px]" />
-          <h1 className='font-bold text-[64px]'>noctiluz</h1>
-        </div>
-      </div>
-    </main>
-   );
+      <input 
+        type="password" 
+        placeholder="Senha" 
+        style={{ padding: "8px", width: "240px" }} 
+      />
+
+      <button style={{ padding: "10px 20px" }}>
+        Login
+      </button>
+
+      <a href="/register" style={{ color: "blue" }}>
+        Criar conta
+      </a>
+    </div>
+  );
 }
-
-export default LoginPage;
